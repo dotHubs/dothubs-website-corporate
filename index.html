@@ -1,23 +1,76 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+           __      __  __  __      __
+      ____/ /___  / /_/ / / /_  __/ /_  _____
+     / __  / __ \/ __/ /_/ / / / / __ \/ ___/
+    / /_/ / /_/ / /_/ __  / /_/ / /_/ (__  )
+    \__,_/\____/\__/_/ /_/\__,_/_.___/____/
+    
+    -->
     <head>
-        <style type='text/css'>
-            pre
-            {
-                margin-bottom : 2px ;
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+        <style media="screen">
+            body{
+                margin-top: 30px;
             }
         </style>
-        <title>dotHubs</title>
     </head>
     <body>
-        <pre>
-       __      __  __  __      __
-  ____/ /___  / /_/ / / /_  __/ /_  _____
- / __  / __ \/ __/ /_/ / / / / __ \/ ___/
-/ /_/ / /_/ / /_/ __  / /_/ / /_/ (__  )
-\__,_/\____/\__/_/ /_/\__,_/_.___/____/
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p>
+                        <a id="english" href="#" class="btn btn-sm btn-primary-outline">
+                            en
+                        </a>
+                        <a id="french" href="#" class="btn btn-sm btn-primary-outline">
+                            fr
+                        </a>
+                    </p>
+                    <h1 class="display-4">
+                        Dot Hubs SAS
+                    </h1>
+                    <p class="lead french">
+                        DOT HUBS SAS est éditrice du site Internet PhoneHubs.com, une plate-forme dédiée aux professionnels de la réparation de smartphones et tablettes.
+                    </p>
+                    <p class="lead english">
+                        The DOT HUBS company is currently working on the PhoneHubs project, a platform for repair technicians in the smartphone and tablet space.
+                    </p>
+                    <a class="lead english" href="https://fr.phonehubs.com">
+                        Visit PhoneHubs.com
+                    </a>
+                    <a class="lead french" href="https://phonehubs.com">
+                        Visitez PhoneHubs.com
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $( document ).ready(function(){
+                console.log("Welcome to the DOT HUBS company") ;
+                $ ( '.french' ).hide() ;
+                $( '#english' ).addClass( 'btn-primary' );
+            });
 
-dotHubs
-        </pre>
+            $( '#french' ).on('click', function(){
+                $( this ).removeClass( 'btn-primary-outline' ).addClass( 'btn-primary' );
+                $( '#english' ).removeClass( 'btn-primary' ).addClass( 'btn-primary-outline' );
+                $( '.english' ).hide();
+                $( '.french' ).show();
+            });
+
+            $( '#english' ).on('click', function(){
+                $( this ).removeClass( 'btn-primary-outline' ).addClass( 'btn-primary' );
+                $( '#french' ).removeClass( 'btn-primary' ).addClass( 'btn-primary-outline' );
+                $( '.french' ).hide();
+                $( '.english' ).show();
+            });
+        </script>
     </body>
 </html>
-
